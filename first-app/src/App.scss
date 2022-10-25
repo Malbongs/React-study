@@ -1,0 +1,52 @@
+$red : #ff0000;
+$orange : #FFBB00;
+$yellow: #FFE400;
+$green: #1DDB16;
+$skyblue: #00D8FF;
+$blue: #0054FF;
+$puple: #5F00FF;
+
+@mixin rect($size) {
+    width: 32px;
+    height: 32px * $size;
+}
+
+.SassTest {
+    display: flex;
+    margin-bottom: 20px;
+    .box {
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+        &.red {
+            background-color: $red;
+            @include rect(1);
+        }
+        &.orange {
+            background-color: $orange;
+            @include rect(2);
+        }
+        &.yellow {
+            background-color: $yellow;
+            @include rect(3);
+        }
+        &.green {
+            background-color: $green;
+            @include rect(4);
+        }
+        &.skyblue {
+            background-color: $skyblue;
+            @include rect(5);
+        }
+        &.blue {
+            background-color: $blue;
+            @include rect(6);
+        }
+        &.puple {
+            background-color: $puple;
+            @include rect(7);
+        }
+        &:hover {
+            opacity: 0.3;
+        }
+    }
+}

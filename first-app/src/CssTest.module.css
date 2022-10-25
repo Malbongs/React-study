@@ -1,0 +1,60 @@
+.div1, .div2, .div3, .div4, .div5{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.div1{
+    position: relative;
+    left: 100px;
+    top: 100px;
+    background-color: red;
+}
+.div2{
+    position: absolute;
+    left: 150px;
+    top: 150px;
+    background-color: orange;
+}
+.div3{
+    position: absolute;
+    left: 200px;
+    top: 150px;
+    background-color: yellow;
+    z-index: 1;
+}
+.div4{
+    position: absolute;
+    left: 250px;
+    top: 200px;
+    background-color: green;
+}
+.div5{
+    position: absolute;
+    left: 300px;
+    top: 200px;
+    background-color: blue;
+    z-index: 1;
+}
+.eyeh{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    left: 10px;
+    top: 10px;
+}
+.eye{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+}
+.grass{
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    left: 100px;
+    top: 140px;
+}

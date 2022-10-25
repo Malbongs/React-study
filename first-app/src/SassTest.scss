@@ -1,0 +1,183 @@
+
+// $red : #ff0000;
+// $orange : #FFBB00;
+// $yellow: #FFE400;
+// $green: #1DDB16;
+// $blue: #00D8FF;
+// $white:white;
+// $black: black;
+
+$pink:pink;
+$yellow:yellow;
+$green: green;
+
+@mixin rect($move) {
+    @keyframes going{
+        0%{
+            left: 0px;
+            top: 0px;
+        }
+        25%{
+           left: 0px + $move;
+           top: 0px;
+        }
+        50%{
+            left: 0px + $move;
+            top: 0px + $move;
+        }
+        75%{
+            left: 10px - $move;
+            top: 0px + $move;
+        }
+        100%{
+            left: 0px;
+            top: 0px;
+        }
+    } 
+}
+
+@mixin yellorect($move) {
+    @keyframes goingyello{
+        0%{
+            left: 0px;
+            top: 0px;
+        }
+        25%{
+           left: 0px + $move;
+           top: 0px;
+        }
+        50%{
+            left: 0px + $move;
+            top: 0px + $move;
+        }
+        75%{
+            left: 20px - $move;
+            top: 0px + $move;
+        }
+        100%{
+            left: 0px;
+            top: 0px;
+        }
+    } 
+}
+
+@mixin greenrect($move) {
+    @keyframes goinggreen{
+        0%{
+            left: 0px;
+            top: 0px;
+        }
+        25%{
+           left: 0px + $move;
+           top: 0px;
+        }
+        50%{
+            left: 0px + $move;
+            top: 0px + $move;
+        }
+        75%{
+            left: 30px - $move;
+            top: 0px + $move;
+        }
+        100%{
+            left: 0px;
+            top: 0px;
+        }
+    } 
+}
+ 
+.pink,.yellow,.green{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.pink{
+    background-color: $pink;
+    @include rect(10);
+    animation-name: going;
+    animation-duration:5s;
+}
+.yellow{
+    background-color: $yellow;
+    @include yellorect(20);
+    animation-name: goingyello;
+    animation-duration:5s;
+   
+}
+
+.green{
+    background-color: $green;
+    @include greenrect(30);
+    animation-name: goinggreen;
+    animation-duration:5s;
+  
+}
+
+
+
+
+
+
+// .div1, .div2, .div3, .div4, .div5{
+//     width: 100px;
+//     height: 100px;
+//     border-radius: 50%;
+// }
+// .div1{
+//     position: relative;
+//     left: 100px;
+//     top: 100px;
+//     background-color: $red;
+// }
+// .div2{
+//     position: absolute;
+//     left: 150px;
+//     top: 150px;
+//     background-color:$orange;
+// }
+// .div3{
+//     position: absolute;
+//     left: 200px;
+//     top: 150px;
+//     background-color: $yellow;
+//     z-index: 1;
+// }
+// .div4{
+//     position: absolute;
+//     left: 250px;
+//     top: 200px;
+//     background-color: $green;
+// }
+// .div5{
+//     position: absolute;
+//     left: 300px;
+//     top: 200px;
+//     background-color: $blue;
+//     z-index: 1;
+// }
+// .eyeh{
+//     position: relative;
+//     width: 40px;
+//     height: 40px;
+//     border-radius: 50%;
+//     background-color: $white;
+//     left: 10px;
+//     top: 10px;
+// }
+// .eye{
+//     position: relative;
+//     width: 30px;
+//     height: 30px;
+//     border-radius: 50%;
+//     background-color: $black;
+// }
+// .grass{
+//     position: absolute;
+//     width: 400px;
+//     height: 200px;
+//     left: 100px;
+//     top: 140px;
+// }
